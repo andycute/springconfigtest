@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: spring-cloud-eurekaClientWithName
+  profiles: dev
+    
+server:
+  port: 7002
+eureka:
+  instance:
+    hostname: peer1
+    prefer-ip-address: true
+    instance-id: spring-cloud-eurekaClient
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8001/eureka/,http://peer3:8003/eureka/,http://peer2:8002/eureka/
+    fetch-registry: true
+    register-with-eureka: true  
+hystrix: 
+  metrics:
+    enabled: true
