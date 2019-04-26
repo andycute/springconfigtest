@@ -4,7 +4,7 @@ spring:
   profiles: dev
 
 server:
-  port: 7003
+  port: 5566
 eureka:
   instance:
     hostname: peer1
